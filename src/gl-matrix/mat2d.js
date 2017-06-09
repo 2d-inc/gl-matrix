@@ -466,4 +466,62 @@ mat2d.equals = function (a, b) {
             Math.abs(a5 - b5) <= glMatrix.EPSILON*Math.max(1.0, Math.abs(a5), Math.abs(b5)));
 };
 
+mat2d.getScaling = function(out, m)
+{
+    var x = m[0];
+    var y = m[1];
+    out[0] = Math.sign(x) * Math.sqrt(x*x + y*y);
+
+    x = m[2];
+    y = m[3];
+    out[1] = Math.sign(y) * Math.sqrt(x*x + y*y);
+
+    return out;
+};
+
+mat2d.decompose = function(s, a)
+{
+    var a0 = a[0], a1 = a[1], a2 = a[2], a3 = a[3];
+    var det = a0 * a3 - a2 * a1;
+    var sx = Math.sqrt(a0*a0 + a1*a1);
+    var sy = Math.sqrt(a2*a2 + a3*a3);
+    if(det < 0)
+    {
+        sx = -sx;
+    }
+
+    s[0] = sx;
+    s[1] = sy;
+
+    return Math.atan2(a1/sx, a0/sx);
+};
+
+/**
+ * Calculates the translation of m
+ *
+ * @param {vec2} a vector to write the translation to
+ * @returns {mat2d} the matrix
+ */
+mat2d.getTranslation = function(out, m)
+{
+    out[0] = m[4];
+    out[1] = m[5];
+    return out;
+};
+
+mat2d.getRotation = function(m)
+{
+    return Math.atan2(m[1], m[0]);
+};
+
+
+mat2d.log = function(m)
+{
+    var scale = vec2.create();
+    var rotation = mat2d.decompose(scale, m);
+    var translation = mat2d.getTranslation(vec2.create(), m);
+    
+    console.log("mat2d", translation, rotation/Math.PI*180.0, scale);
+};
+
 module.exports = mat2d;

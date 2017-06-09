@@ -584,4 +584,20 @@ vec2.equals = function (a, b) {
             Math.abs(a1 - b1) <= glMatrix.EPSILON*Math.max(1.0, Math.abs(a1), Math.abs(b1)));
 };
 
+vec2.isEqual = function(a, b)
+{
+    return a[0] == b[0] && a[1] == b[1];
+};
+
+vec2.toArray = function(a)
+{
+    return [a[0],a[1]];
+};
+
+
+vec2.getAngle = function(v)
+{
+    return Math.atan2(v[1], v[0]);
+}
+
 module.exports = vec2;
