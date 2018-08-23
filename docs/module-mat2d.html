@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: mat2</title>
+    <title>JSDoc: Module: mat2d</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: mat2</h1>
+    <h1 class="page-title">Module: mat2d</h1>
 
     
 
@@ -28,9 +28,8 @@
 
 <header>
     
-        <h2>mat2</h2>
         
-            <div class="class-description">2x2 Matrix</div>
+            
         
     
 </header>
@@ -39,14 +38,22 @@
     <div class="container-overview">
     
         
+            <div class="description">A mat2d contains six elements defined as:
+<pre>
+[a, c, tx,
+ b, d, ty]
+</pre>
+This is a short form for the 3x3 matrix:
+<pre>
+[a, c, tx,
+ b, d, ty,
+ 0, 0, 1]
+</pre>
+The last row is ignored so the array is shorter and operations are faster.</div>
+        
 
-    
-    <h2>Constructor</h2>
-    
-
-    <h4 class="name" id="mat2"><span class="type-signature"></span>new mat2<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
+        
+            
 
 
 
@@ -91,7 +98,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line23">line 23</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line3">line 3</a>
     </li></ul></dd>
     
 
@@ -117,6 +124,9 @@
 
 
 
+
+
+        
     
     </div>
 
@@ -126,7 +136,9 @@
 
     
 
-     
+    
+
+    
 
     
 
@@ -140,14 +152,16 @@
 
     
 
-    <h4 class="name" id=".add"><span class="type-signature">(static) </span>add<span class="signature">(out, a, b)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".add"><span class="type-signature">(static) </span>add<span class="signature">(out, a, b)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Adds two mat2's
+    Adds two mat2d's
 </div>
 
 
@@ -189,7 +203,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -212,7 +226,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -235,7 +249,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -286,7 +300,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line346">line 346</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line344">line 344</a>
     </li></ul></dd>
     
 
@@ -324,7 +338,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -334,195 +348,23 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".adjoint"><span class="type-signature">(static) </span>adjoint<span class="signature">(out, a)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".clone"><span class="type-signature">(static) </span>clone<span class="signature">(a)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Calculates the adjugate of a mat2
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>out</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="mat2.html">mat2</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the receiving matrix</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>a</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="mat2.html">mat2</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the source matrix</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line180">line 180</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    out
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="mat2.html">mat2</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id=".clone"><span class="type-signature">(static) </span>clone<span class="signature">(a)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
-
-    
-
-
-
-<div class="description">
-    Creates a new mat2 initialized with values from an existing matrix
+    Creates a new mat2d initialized with values from an existing matrix
 </div>
 
 
@@ -564,7 +406,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -615,7 +457,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line49">line 49</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line46">line 46</a>
     </li></ul></dd>
     
 
@@ -642,7 +484,7 @@
 
         
 <div class="param-desc">
-    a new 2x2 matrix
+    a new 2x3 matrix
 </div>
 
 
@@ -653,7 +495,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -663,19 +505,23 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".copy"><span class="type-signature">(static) </span>copy<span class="signature">(out, a)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".copy"><span class="type-signature">(static) </span>copy<span class="signature">(out, a)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Copy the values from one mat2 to another
+    Copy the values from one mat2d to another
 </div>
 
 
@@ -717,7 +563,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -740,7 +586,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -791,7 +637,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line65">line 65</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line64">line 64</a>
     </li></ul></dd>
     
 
@@ -829,7 +675,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -839,19 +685,23 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".create"><span class="type-signature">(static) </span>create<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".create"><span class="type-signature">(static) </span>create<span class="signature">()</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Creates a new identity mat2
+    Creates a new identity mat2d
 </div>
 
 
@@ -895,7 +745,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line34">line 34</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line27">line 27</a>
     </li></ul></dd>
     
 
@@ -922,7 +772,7 @@
 
         
 <div class="param-desc">
-    a new 2x2 matrix
+    a new 2x3 matrix
 </div>
 
 
@@ -933,7 +783,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -943,19 +793,23 @@
 
 
 
+
+
         
             
 
     
 
+    
     <h4 class="name" id=".determinant"><span class="type-signature">(static) </span>determinant<span class="signature">(a)</span><span class="type-signature"> &rarr; {Number}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Calculates the determinant of a mat2
+    Calculates the determinant of a mat2d
 </div>
 
 
@@ -997,7 +851,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -1048,7 +902,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line197">line 197</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line166">line 166</a>
     </li></ul></dd>
     
 
@@ -1096,12 +950,16 @@
 
 
 
+
+
         
             
 
     
 
+    
     <h4 class="name" id=".equals"><span class="type-signature">(static) </span>equals<span class="signature">(a, b)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
 
     
 
@@ -1150,7 +1008,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -1173,7 +1031,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -1224,7 +1082,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line394">line 394</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line427">line 427</a>
     </li></ul></dd>
     
 
@@ -1272,12 +1130,16 @@
 
 
 
+
+
         
             
 
     
 
+    
     <h4 class="name" id=".exactEquals"><span class="type-signature">(static) </span>exactEquals<span class="signature">(a, b)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
 
     
 
@@ -1326,7 +1188,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -1349,7 +1211,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -1400,7 +1262,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line383">line 383</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line416">line 416</a>
     </li></ul></dd>
     
 
@@ -1448,19 +1310,23 @@
 
 
 
+
+
         
             
 
     
 
+    
     <h4 class="name" id=".frob"><span class="type-signature">(static) </span>frob<span class="signature">(a)</span><span class="type-signature"> &rarr; {Number}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Returns Frobenius norm of a mat2
+    Returns Frobenius norm of a mat2d
 </div>
 
 
@@ -1502,7 +1368,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -1553,7 +1419,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line318">line 318</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line332">line 332</a>
     </li></ul></dd>
     
 
@@ -1601,19 +1467,27 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".fromRotation"><span class="type-signature">(static) </span>fromRotation<span class="signature">(out, rad)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".fromRotation"><span class="type-signature">(static) </span>fromRotation<span class="signature">(out, rad)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Creates a matrix from a given angleThis is equivalent to (but much faster than):    mat2.identity(dest);    mat2.rotate(dest, dest, rad);
+    Creates a matrix from a given angle
+This is equivalent to (but much faster than):
+
+    mat2d.identity(dest);
+    mat2d.rotate(dest, dest, rad);
 </div>
 
 
@@ -1655,7 +1529,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -1665,7 +1539,7 @@
 
             
 
-            <td class="description last">mat2 receiving operation result</td>
+            <td class="description last">mat2d receiving operation result</td>
         </tr>
 
     
@@ -1729,7 +1603,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line273">line 273</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line262">line 262</a>
     </li></ul></dd>
     
 
@@ -1767,7 +1641,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -1777,19 +1651,27 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".fromScaling"><span class="type-signature">(static) </span>fromScaling<span class="signature">(out, v)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".fromScaling"><span class="type-signature">(static) </span>fromScaling<span class="signature">(out, v)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Creates a matrix from a vector scalingThis is equivalent to (but much faster than):    mat2.identity(dest);    mat2.scale(dest, dest, vec);
+    Creates a matrix from a vector scaling
+This is equivalent to (but much faster than):
+
+    mat2d.identity(dest);
+    mat2d.scale(dest, dest, vec);
 </div>
 
 
@@ -1831,7 +1713,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -1841,7 +1723,7 @@
 
             
 
-            <td class="description last">mat2 receiving operation result</td>
+            <td class="description last">mat2d receiving operation result</td>
         </tr>
 
     
@@ -1854,7 +1736,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="vec2.html">vec2</a></span>
+<span class="param-type">vec2</span>
 
 
             
@@ -1905,7 +1787,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line294">line 294</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line284">line 284</a>
     </li></ul></dd>
     
 
@@ -1943,7 +1825,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -1953,241 +1835,27 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".fromValues"><span class="type-signature">(static) </span>fromValues<span class="signature">(m00, m01, m10, m11)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".fromTranslation"><span class="type-signature">(static) </span>fromTranslation<span class="signature">(out, v)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Create a new mat2 with the given values
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>m00</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Component in column 0, row 0 position (index 0)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>m01</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Component in column 0, row 1 position (index 1)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>m10</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Component in column 1, row 0 position (index 2)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>m11</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Component in column 1, row 1 position (index 3)</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line96">line 96</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    out A new 2x2 matrix
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="mat2.html">mat2</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id=".identity"><span class="type-signature">(static) </span>identity<span class="signature">(out)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
-
-    
-
-
-
-<div class="description">
-    Set a mat2 to the identity matrix
+    Creates a matrix from a vector translation
+This is equivalent to (but much faster than):
+
+    mat2d.identity(dest);
+    mat2d.translate(dest, dest, vec);
 </div>
 
 
@@ -2229,7 +1897,459 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">mat2d receiving operation result</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>v</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">vec2</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Translation vector</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line305">line 305</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    out
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">mat2d</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".fromValues"><span class="type-signature">(static) </span>fromValues<span class="signature">(a, b, c, d, tx, ty)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Create a new mat2d with the given values
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>a</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Component A (index 0)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Component B (index 1)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>c</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Component C (index 2)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>d</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Component D (index 3)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tx</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Component TX (index 4)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ty</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Component TY (index 5)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line101">line 101</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A new mat2d
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">mat2d</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".identity"><span class="type-signature">(static) </span>identity<span class="signature">(out)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Set a mat2d to the identity matrix
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>out</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mat2d</span>
 
 
             
@@ -2280,7 +2400,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line79">line 79</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line80">line 80</a>
     </li></ul></dd>
     
 
@@ -2318,7 +2438,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -2328,19 +2448,23 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".invert"><span class="type-signature">(static) </span>invert<span class="signature">(out, a)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".invert"><span class="type-signature">(static) </span>invert<span class="signature">(out, a)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Inverts a mat2
+    Inverts a mat2d
 </div>
 
 
@@ -2382,7 +2506,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -2405,7 +2529,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -2456,7 +2580,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line154">line 154</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line141">line 141</a>
     </li></ul></dd>
     
 
@@ -2494,7 +2618,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -2504,204 +2628,6 @@
 
 
 
-        
-            
-
-    
-
-    <h4 class="name" id=".LDU"><span class="type-signature">(static) </span>LDU<span class="signature">(L, D, U, a)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-<div class="description">
-    Returns L, D and U matrices (Lower triangular, Diagonal and Upper triangular) by factorizing the input matrix
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>L</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="mat2.html">mat2</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the lower triangular matrix</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>D</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="mat2.html">mat2</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the diagonal matrix</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>U</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="mat2.html">mat2</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the upper triangular matrix</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>a</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="mat2.html">mat2</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the input matrix to factorize</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line330">line 330</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         
@@ -2709,14 +2635,16 @@
 
     
 
+    
     <h4 class="name" id=".mul"><span class="type-signature">(static) </span>mul<span class="signature">()</span><span class="type-signature"></span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Alias for <a href="mat2.html#.multiply">mat2.multiply</a>
+    Alias for mat2d.multiply
 </div>
 
 
@@ -2760,7 +2688,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line223">line 223</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line442">line 442</a>
     </li></ul></dd>
     
 
@@ -2786,19 +2714,23 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".multiply"><span class="type-signature">(static) </span>multiply<span class="signature">(out, a, b)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".multiply"><span class="type-signature">(static) </span>multiply<span class="signature">(out, a, b)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Multiplies two mat2's
+    Multiplies two mat2d's
 </div>
 
 
@@ -2840,7 +2772,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -2863,7 +2795,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -2886,7 +2818,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -2937,7 +2869,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line209">line 209</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line178">line 178</a>
     </li></ul></dd>
     
 
@@ -2975,7 +2907,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -2985,12 +2917,16 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".multiplyScalar"><span class="type-signature">(static) </span>multiplyScalar<span class="signature">(out, a, b)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".multiplyScalar"><span class="type-signature">(static) </span>multiplyScalar<span class="signature">(out, a, b)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
@@ -3039,7 +2975,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -3062,7 +2998,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -3136,7 +3072,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line411">line 411</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line380">line 380</a>
     </li></ul></dd>
     
 
@@ -3174,7 +3110,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -3184,19 +3120,23 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".multiplyScalarAndAdd"><span class="type-signature">(static) </span>multiplyScalarAndAdd<span class="signature">(out, a, b, scale)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".multiplyScalarAndAdd"><span class="type-signature">(static) </span>multiplyScalarAndAdd<span class="signature">(out, a, b, scale)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Adds two mat2's after multiplying each element of the second operand by a scalar value.
+    Adds two mat2d's after multiplying each element of the second operand by a scalar value.
 </div>
 
 
@@ -3238,7 +3178,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -3261,7 +3201,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -3284,7 +3224,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -3358,7 +3298,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line428">line 428</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line399">line 399</a>
     </li></ul></dd>
     
 
@@ -3396,7 +3336,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -3406,19 +3346,23 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".rotate"><span class="type-signature">(static) </span>rotate<span class="signature">(out, a, rad)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".rotate"><span class="type-signature">(static) </span>rotate<span class="signature">(out, a, rad)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Rotates a mat2 by the given angle
+    Rotates a mat2d by the given angle
 </div>
 
 
@@ -3460,7 +3404,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -3483,7 +3427,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -3557,7 +3501,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line233">line 233</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line198">line 198</a>
     </li></ul></dd>
     
 
@@ -3595,7 +3539,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -3605,19 +3549,23 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".scale"><span class="type-signature">(static) </span>scale<span class="signature">(out, a, v)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".scale"><span class="type-signature">(static) </span>scale<span class="signature">(out, a, v)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Scales the mat2 by the dimensions in the given vec2
+    Scales the mat2d by the dimensions in the given vec2
 </div>
 
 
@@ -3659,7 +3607,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -3682,7 +3630,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -3692,7 +3640,7 @@
 
             
 
-            <td class="description last">the matrix to rotate</td>
+            <td class="description last">the matrix to translate</td>
         </tr>
 
     
@@ -3705,7 +3653,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="vec2.html">vec2</a></span>
+<span class="param-type">vec2</span>
 
 
             
@@ -3756,7 +3704,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line252">line 252</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line219">line 219</a>
     </li></ul></dd>
     
 
@@ -3794,7 +3742,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -3804,19 +3752,23 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".set"><span class="type-signature">(static) </span>set<span class="signature">(out, m00, m01, m10, m11)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".set"><span class="type-signature">(static) </span>set<span class="signature">(out, a, b, c, d, tx, ty)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Set the components of a mat2 to the given values
+    Set the components of a mat2d to the given values
 </div>
 
 
@@ -3858,7 +3810,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -3875,7 +3827,7 @@
 
         <tr>
             
-                <td class="name"><code>m00</code></td>
+                <td class="name"><code>a</code></td>
             
 
             <td class="type">
@@ -3891,14 +3843,14 @@
 
             
 
-            <td class="description last">Component in column 0, row 0 position (index 0)</td>
+            <td class="description last">Component A (index 0)</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>m01</code></td>
+                <td class="name"><code>b</code></td>
             
 
             <td class="type">
@@ -3914,14 +3866,14 @@
 
             
 
-            <td class="description last">Component in column 0, row 1 position (index 1)</td>
+            <td class="description last">Component B (index 1)</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>m10</code></td>
+                <td class="name"><code>c</code></td>
             
 
             <td class="type">
@@ -3937,14 +3889,14 @@
 
             
 
-            <td class="description last">Component in column 1, row 0 position (index 2)</td>
+            <td class="description last">Component C (index 2)</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>m11</code></td>
+                <td class="name"><code>d</code></td>
             
 
             <td class="type">
@@ -3960,7 +3912,53 @@
 
             
 
-            <td class="description last">Component in column 1, row 1 position (index 3)</td>
+            <td class="description last">Component D (index 3)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tx</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Component TX (index 4)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ty</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Component TY (index 5)</td>
         </tr>
 
     
@@ -4001,7 +3999,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line115">line 115</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line124">line 124</a>
     </li></ul></dd>
     
 
@@ -4039,7 +4037,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -4049,19 +4047,23 @@
 
 
 
+
+
         
             
 
     
 
+    
     <h4 class="name" id=".str"><span class="type-signature">(static) </span>str<span class="signature">(a)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Returns a string representation of a mat2
+    Returns a string representation of a mat2d
 </div>
 
 
@@ -4103,7 +4105,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -4154,7 +4156,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line308">line 308</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line321">line 321</a>
     </li></ul></dd>
     
 
@@ -4202,19 +4204,23 @@
 
 
 
+
+
         
             
 
     
 
+    
     <h4 class="name" id=".sub"><span class="type-signature">(static) </span>sub<span class="signature">()</span><span class="type-signature"></span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Alias for <a href="mat2.html#.subtract">mat2.subtract</a>
+    Alias for mat2d.subtract
 </div>
 
 
@@ -4258,7 +4264,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line374">line 374</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line448">line 448</a>
     </li></ul></dd>
     
 
@@ -4284,12 +4290,16 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".subtract"><span class="type-signature">(static) </span>subtract<span class="signature">(out, a, b)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".subtract"><span class="type-signature">(static) </span>subtract<span class="signature">(out, a, b)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
@@ -4338,7 +4348,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -4361,7 +4371,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -4384,7 +4394,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -4435,7 +4445,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line362">line 362</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line362">line 362</a>
     </li></ul></dd>
     
 
@@ -4473,7 +4483,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
@@ -4483,19 +4493,23 @@
 
 
 
+
+
         
             
 
     
 
-    <h4 class="name" id=".transpose"><span class="type-signature">(static) </span>transpose<span class="signature">(out, a)</span><span class="type-signature"> &rarr; {<a href="mat2.html">mat2</a>}</span></h4>
+    
+    <h4 class="name" id=".translate"><span class="type-signature">(static) </span>translate<span class="signature">(out, a, v)</span><span class="type-signature"> &rarr; {mat2d}</span></h4>
+    
 
     
 
 
 
 <div class="description">
-    Transpose the values of a mat2
+    Translates the mat2d by the dimensions in the given vec2
 </div>
 
 
@@ -4537,7 +4551,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -4560,7 +4574,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
             
@@ -4570,7 +4584,30 @@
 
             
 
-            <td class="description last">the source matrix</td>
+            <td class="description last">the matrix to translate</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>v</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">vec2</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the vec2 to translate the matrix by</td>
         </tr>
 
     
@@ -4611,7 +4648,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mat2.js.html">mat2.js</a>, <a href="mat2.js.html#line131">line 131</a>
+        <a href="mat2d.js.html">mat2d.js</a>, <a href="mat2d.js.html#line239">line 239</a>
     </li></ul></dd>
     
 
@@ -4649,13 +4686,15 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="mat2.html">mat2</a></span>
+<span class="param-type">mat2d</span>
 
 
     </dd>
 </dl>
 
     
+
+
 
 
 
@@ -4675,13 +4714,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="glMatrix.html">glMatrix</a></li><li><a href="mat2.html">mat2</a></li><li><a href="mat2d.html">mat2d</a></li><li><a href="mat3.html">mat3</a></li><li><a href="mat4.html">mat4</a></li><li><a href="quat.html">quat</a></li><li><a href="vec2.html">vec2</a></li><li><a href="vec3.html">vec3</a></li><li><a href="vec4.html">vec4</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-glMatrix.html">glMatrix</a></li><li><a href="module-mat2.html">mat2</a></li><li><a href="module-mat2d.html">mat2d</a></li><li><a href="module-mat3.html">mat3</a></li><li><a href="module-mat4.html">mat4</a></li><li><a href="module-quat.html">quat</a></li><li><a href="module-quat2.html">quat2</a></li><li><a href="module-vec2.html">vec2</a></li><li><a href="module-vec3.html">vec3</a></li><li><a href="module-vec4.html">vec4</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun May 01 2016 12:11:58 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Jul 13 2018 11:51:33 GMT+0200 (W. Europe Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

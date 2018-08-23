@@ -1,11 +1,7 @@
-/*
-* common.js unit test
-*/
+import * as glMatrix from "../../src/gl-matrix/common"
 
-describe("glMatrix", function(){
-  var result;
-
-  var glMatrix = require("../../src/gl-matrix/common.js");
+describe("common", function(){
+  let result;
 
   describe("toRadian", function(){
     beforeEach(function(){ result = glMatrix.toRadian(180); });
@@ -13,7 +9,7 @@ describe("glMatrix", function(){
   });
 
   describe("equals", function() {
-    var r0, r1, r2;
+    let r0, r1, r2;
     beforeEach(function() {
       r0 = glMatrix.equals(1.0, 0.0);
       r1 = glMatrix.equals(1.0, 1.0);
